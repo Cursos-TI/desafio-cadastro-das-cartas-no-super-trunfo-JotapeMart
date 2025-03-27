@@ -8,6 +8,8 @@ int main() {
     float area;
     float pib;
     int pturisticos; // Pontos turísticos
+    float densidadepopulacional;
+    float PIBperCapita;
 
     char estado2[30];
     char codigo2[5];
@@ -16,6 +18,8 @@ int main() {
     float area2;
     float pib2;
     int pturisticos2; // Pontos turísticos
+    float densidadepopulacional2;
+    float PIBperCapita2;
 
     printf ("Desafio Super Trunfo!\n");
 
@@ -32,13 +36,13 @@ int main() {
     printf("Digite a populacao do estado: ");
     scanf("%d", &populacao);
 
-    printf("Digite a area do estado em km²: ");
+    printf("Digite a area do estado em km²: \n");
     scanf("%f", &area);
 
-    printf("Digite o PIB do estado: ");
+    printf("Digite o PIB do estado: \n");
     scanf("%f", &pib);
 
-    printf("Digite a quantidade de pontos turísticos: ");
+    printf("Digite a quantidade de pontos turísticos: \n");
     scanf("%d", &pturisticos);
 
     // Carta 2:
@@ -54,14 +58,20 @@ int main() {
     printf("Digite a populacao do estado: ");
     scanf("%d", &populacao2);
 
-    printf("Digite a área do estado em km²: ");
+    printf("Digite a área do estado em km²: \n");
     scanf("%f", &area2);
 
-    printf("Digite o PIB do estado: ");
+    printf("Digite o PIB do estado: \n");
     scanf("%f", &pib2);
 
-    printf("Digite a quantidade de pontos turísticos: ");
+    printf("Digite a quantidade de pontos turísticos: \n");
     scanf("%d", &pturisticos2);
+
+    densidadepopulacional = (float) populacao / area;
+    PIBperCapita = (float) pib / populacao;
+
+    densidadepopulacional2 = (float) populacao2 / area2;
+    PIBperCapita2 = (float) pib2 / populacao2;
 
     // Dados sendo mostrados:
     printf("\nCarta 1:\n");
@@ -72,6 +82,9 @@ int main() {
     printf("Área: %.2f km²\n", area);      // Removido o &
     printf("PIB: %.2f Bilhões de reais\n", pib);  // Removido o &
     printf("Número de pontos turísticos: %d\n", pturisticos); // Removido o &
+    printf("Densidade populacional: %.2fhab/km²\n", densidadepopulacional);
+    printf ("Pib per capita: %.2f\n", PIBperCapita);
+
 
     printf("\nCarta 2:\n");
     printf("Estado: %s\n", estado2);
@@ -81,6 +94,9 @@ int main() {
     printf("Área: %.2f km²\n", area2);      // Removido o &
     printf("PIB: %.2f Bilhões de reais\n", pib2);  // Removido o &
     printf("Número de pontos turísticos: %d\n", pturisticos2); // Removido o &
+    printf("Densidade populacional: %.2fhab/km²\n", densidadepopulacional2);
+    printf ("Pib per capita: %.2f\n", PIBperCapita2);
+
 
     return 0;
 }
